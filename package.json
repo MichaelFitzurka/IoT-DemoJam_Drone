@@ -1,0 +1,33 @@
+{
+  "name": "iotd-drone",
+  "version": "1.0.0",
+  "description": "A cylon/leap motion/keyboard/webpage bebop 2 drone controller/webcam",
+  "main": "iotd-drone.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MichaelFitzurka/IoT-Demo_Drone"
+  },
+  "author": "Michael Fitzurka @ DLT Solutions, Inc.",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/MichaelFitzurka/IoT-Demo_Drone/issues"
+  },
+  "homepage": "https://github.com/MichaelFitzurka/IoT-Demo_Drone",
+  "dependencies": {
+    "aws-sdk": "latest",
+    "child-process": "latest",
+    "console-mirroring": "latest",
+    "cylon": "latest",
+    "cylon-bebop": "latest",
+    "cylon-keyboard": "latest",
+    "cylon-leapmotion": "latest",
+    "cylon-speech": "latest",
+    "express": "latest",
+    "http": "latest",
+    "http-proxy": "latest",
+    "request": "latest",
+    "socket.io": "latest",
+    "system-sleep": "latest",
+    "tcp-proxy": "latest"
+  }
+}

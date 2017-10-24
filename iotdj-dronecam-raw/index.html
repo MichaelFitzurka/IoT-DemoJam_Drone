@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="application-name" content="iotdj-dronecam">
+  <meta name="author" content="Michael Fitzurka @ DLT Solutiuons, Inc.">
+  <meta name="description" content="IoT DemoJam :: Drone-Cam">
+  <title>IoT DemoJam :: Drone-Cam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <video id="video-background" autoplay playsinline muted>
+    <source id="video-stream" src="http://localhost:9081/stream?t=0" type="video/ogg" />
+    HTML5 video not supported.
+  </video>
+
+  <header id="content">
+    <h1 class="title inline">IoT DemoJam :: Drone-Cam</h1>
+  </header>
+
+  <section>
+    <div id="console"></div>
+    <h3>
+    <br />
+      <a href="#" class="action-button shadow animate green" target="_blank"
+         onclick="JavaScript:document.getElementById('console').innerHTML='';return false;">Clear</a>
+      <a href="#" class="action-button shadow animate blue" onclick="JavaScript:return IoTDJ.takePicture();return false;">
+        <img src="graphics/camera.png" alt="Photo" height="24" width="24"></a>
+      <a href="#" class="action-button shadow animate red"
+         onclick="JavaScript:var music=new Audio('sounds/nuke.ogg');music.play();return false;">
+        <img src="graphics/nuke.png" alt="Nuke" height="24" width="24"></a>
+    </h3>
+  </section>
+
+  <aside>
+    <iframe id="status" name="targetframe"></iframe>
+    <br />
+    <div>
+      <a id="statusY" href="http://iotdj-sensor-yellow/" class="action-button shadow animate yellow" target="targetframe"
+         onclick="JavaScript:IoTDJ.statusButtonOnclick('Y')">Y</a>&nbsp;
+      <a id="statusG" href="http://iotdj-sensor-green/" class="action-button shadow animate green" target="targetframe"
+         onclick="JavaScript:IoTDJ.statusButtonOnclick('G')">G</a>&nbsp;
+      <a id="statusB" href="http://iotdj-sensor-blue/" class="action-button shadow animate blue" target="targetframe"
+         onclick="JavaScript:IoTDJ.statusButtonOnclick('B')">B</a>
+    </div>
+  </aside>
+
+  <script src="js/three.min.js"></script>
+  <script src="js/leap-0.6.4.min.js"></script>
+  <script src="js/leap-plugins-0.1.12.min.js"></script>
+  <script src="js/leap.rigged-hand-0.1.7.min.js"></script>
+  <script src="js/socket.io-1.4.5.js"></script>
+  <script src="js/browser.console.mirror.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
